@@ -1,0 +1,58 @@
+{
+  "name": "markdown",
+  "version": "0.0.1",
+  "description": "markdown previewer for FCC front end library project",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config webpack.common.js",
+    "start": "webpack-dev-server --config webpack.common.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "tsc --noEmit && eslint  --ignore-pattern 'node_modules' --ignore-pattern 'dist' '*/**/*.{js,ts,tsx}'"
+  },
+  "keywords": [
+    "FCC",
+    "markdown",
+    "react"
+  ],
+  "author": "jay",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^16.9.11",
+    "@types/react-dom": "^16.9.3",
+    "@typescript-eslint/eslint-plugin": "^2.6.0",
+    "@typescript-eslint/parser": "^2.6.0",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.16.0",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^3.0.9",
+    "lint-staged": "^10.0.0-1",
+    "prettier": "^1.18.2",
+    "serve": "^11.2.0",
+    "source-map-loader": "^0.2.4",
+    "ts-loader": "^6.2.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-middleware": "^3.7.2",
+    "webpack-dev-server": "^3.9.0",
+    "webpack-hot-middleware": "^2.25.0",
+    "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "typescript": "^3.6.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsc --noEmit && lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "eslint . --fix",
+      "git add"
+    ]
+  }
+}
