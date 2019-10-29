@@ -13,8 +13,8 @@ marked.setOptions({
 
 export const Preview = (props: { text: string }): JSX.Element => {
   return (
-    <div className="col-12 col-md-6 border p-2">
-      <h2 className="text-info">Preview</h2>
+    <div className="col-12 col-md-6 border border-secondary p-2">
+      <h2 className="text-light bg-dark pl-2">Preview</h2>
       <div id="preview" dangerouslySetInnerHTML={{ __html: marked(props.text) }} />
     </div>
   );
