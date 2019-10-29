@@ -55,7 +55,7 @@ export class App extends React.Component<{}, { text: string }> {
     return (
       <Fragment>
         <Head />
-        <div className="row p-3">
+        <div className="row p-2 justify-content-center align-items-stretch flex-md-nowrap">
           <Editor text={this.state.text} onChange={this.onEditorChange} />
           <Preview text={this.state.text} />
         </div>

@@ -2,7 +2,7 @@ import * as React from "react";
 
 export const Editor = (props: { text: string; onChange: (test: string) => void }): JSX.Element => {
   return (
-    <div className="col border p-3 mr-4 ">
+    <div className="col-12 col-md-6 border p-2 mr-md-1">
       <h2 className="text-info">Editor</h2>
       <form>
         <textarea
