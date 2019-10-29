@@ -4,11 +4,6 @@ const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  mode: "development",
-  devtool: "inline-source-map",
-  devServer: {
-    contentBase: "./dist",
-  },
   entry: {
     app: ["./src/index.tsx", "webpack-hot-middleware/client"],
   },

@@ -4,8 +4,8 @@
   "description": "markdown previewer for FCC front end library project",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --config webpack.common.js",
-    "start": "webpack-dev-server --config webpack.common.js",
+    "build": "webpack --config webpack.prod.js",
+    "start": "webpack-dev-server --config webpack.dev.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "tsc --noEmit && eslint  --ignore-pattern 'node_modules' --ignore-pattern 'dist' '*/**/*.{js,ts,tsx}'"
   },
